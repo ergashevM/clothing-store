@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-integral: "Integral";
+  --font-satoshi: "Satoshi";
+}
+
+@font-face {
+  font-family: "Integral";
+  src: url("./fonts/integral.otf");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/satoshi.otf");
+}
+
+.casual-background,
+.formal-background,
+.party-background,
+.gym-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  border-radius: 20px;
+}
+.casual-background {
+  background-image: url(../assets/casual.svg);
+}
+.formal-background {
+  background-image: url(../assets/formal.svg);
+}
+.party-background {
+  background-image: url(../assets/party.svg);
+}
+.gym-background {
+  background-image: url(../assets/gym.svg);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
